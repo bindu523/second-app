@@ -1,0 +1,23 @@
+.my-app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: #006E90;
+}
+
+.my-app-header {
+    font-size: 64px;
+    margin-bottom: 46px;
+    text-transform: uppercase;
+}
+
+.my-app-button {
+    padding: 12px;
+    border-radius: 16px;
+    background: #99C24D;
+    color: white;
+    cursor: pointer;
+}
