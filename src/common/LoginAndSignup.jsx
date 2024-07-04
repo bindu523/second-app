@@ -14,7 +14,7 @@ const LoginAndSignup = (props) => {
     const [apiError, setApiError] = useState('');
 
     const callSignUpAPI = () => {
-        return axios.post('https://gagan-backend-axhy.onrender.com/api/users/create', {
+        return axios.post('https://my-app-db-dwd3.onrender.com/api/users/create', {
             username: userName,
             email,
             password
@@ -29,7 +29,7 @@ const LoginAndSignup = (props) => {
     }
 
     const callLoginAPI = () => {
-        return axios.post('https://gagan-backend-axhy.onrender.com/api/users/login', {
+        return axios.post('https://my-app-db-dwd3.onrender.com/api/users/login', {
                 email,
                 password
             }).then((res) => {
