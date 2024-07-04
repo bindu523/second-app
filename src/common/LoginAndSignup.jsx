@@ -14,7 +14,7 @@ const LoginAndSignup = (props) => {
     const [apiError, setApiError] = useState('');
 
     const callSignUpAPI = () => {
-        return axios.post('http://localhost:8000/api/users/create', {
+        return axios.post('https://gagan-backend-axhy.onrender.com/api/users/create', {
             username: userName,
             email,
             password
@@ -29,7 +29,7 @@ const LoginAndSignup = (props) => {
     }
 
     const callLoginAPI = () => {
-        return axios.post('http://localhost:8000/api/users/login', {
+        return axios.post('https://gagan-backend-axhy.onrender.com/api/users/login', {
                 email,
                 password
             }).then((res) => {
@@ -68,10 +68,9 @@ const LoginAndSignup = (props) => {
             errors.password = "Password must be at least 8 characters long";
         }
 
-        if((errors && errors.username) || errors.email || errors.password) {
+        if(errors && errors.username || errors.email || errors.password) {
             return setErrors(errors);
         } else {
-            
             setErrors({});
             if(props.heading === 'signup') {
                 callSignUpAPI();

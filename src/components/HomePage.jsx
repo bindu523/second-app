@@ -11,7 +11,7 @@ const HomePage = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const getUserData = () => {
-        return axios.get('http://localhost:8000/api/users/get-user-data', {
+        return axios.get('https://gagan-backend-axhy.onrender.com/api/users/get-user-data', {
             headers: {
                 authtoken: token 
             },
